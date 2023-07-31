@@ -1,0 +1,14 @@
+<div>
+
+	{% for post in site.posts %}
+	
+	
+<div class="article {{ post.label }}">
+     <a href="{{ site.url }}/blog{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <em style="opacity:.5!important;font-size:14px!important;">Created {{ post.date | date: '%B %-d, %Y' }}</em><br>
+	{{ post.excerpt | strip_html | strip_newlines | truncatewords: 35 }}<br>
+	<a href="{{ site.url }}/blog{{ post.url }}" title="{{ post.title }}">Read more</a>
+</div>
+
+    {% endfor %}
+	
+</div>

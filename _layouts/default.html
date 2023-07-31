@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBYQYLVJK9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YBYQYLVJK9');
+</script>
+
+ 
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="og:image" content="{{ site.logo }}">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="title" content="{{ site.title }}">
+    <meta name="keywords" content="blog, enneagram, video games, furry, anthro">
+    <meta name="author" content="{{ site.author_name }}">
+
+    <title>{{ site.title }}</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+	
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon }}">
+
+    <script src="https://kit.fontawesome.com/56182aba27.js" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="/art/uikit/css/uikit.min.css" />
+	
+    <link href="/art/index.css" rel="stylesheet">
+	
+<script src="/art/uikit/js/uikit.min.js"></script>
+    <script src="/art/uikit/js/uikit-icons.min.js"></script>
+	
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+      
+      $("a.all").click(function(){
+        $("div.article").removeClass("hide");
+	$("a").removeClass("active");
+	$("a.all").addClass("active");
+      });
+      $("a.true-crime").click(function(){
+        $("div.article:not([true-crime])").addClass("hide");
+        $("a:not([true-crime])").removeClass("active");
+        $("div.article.true-crime").removeClass("hide");
+        $("a.true-crime").addClass("active");
+      });
+      $("a.typology").click(function(){
+        $("div.article:not([typology])").addClass("hide");
+        $("a:not([typology])").removeClass("active");
+        $("div.article.typology").removeClass("hide");
+        $("a.typology").addClass("active");
+      });
+      $("a.games").click(function(){
+        $("div.article:not([games])").addClass("hide");
+        $("a:not([games])").removeClass("active");
+        $("div.article.games").removeClass("hide");
+        $("a.games").addClass("active");
+      });      
+    });
+  </script>
+
+</head>
+<body>
+	
+      {% include rainbow.html %}
+
+<div class="canvas">
+    <div class="links">
+        
+         <a id="theme-toggle" class="desktop" onclick="modeSwitcher()"></a>
+	    
+      <a href="/blog"><h1 style="text-transform:uppercase;">My Blog</h1></a>
+
+    
+    <!--<p style="text-align:center;line-height: 135%;letter-spacing: 0.25em;text-transform: uppercase;">CS RLOXI<br>coder, doodler, polyglot, true crime nerd</p>-->	    
+	    <p style="text-align:center;line-height: 135%;letter-spacing: 0.25em;text-transform: uppercase;margin-bottom:25px;">{% include pages.html %}</p>
+      
+           
+                  
+     {% include portfolio.html %} 
+	    
+	 	    <div style="clear:both;"></div>
+	    
+    <!-- Pagination links -->
+<!--{% if paginator.total_pages > 1 %}
+<div class="pagination">
+
+  {% if paginator.next_page %}
+    <a href="{{ site.url }}/blog{{ paginator.next_page_path | relative_url }}" class="next" style="line-height: 135%;letter-spacing: 0.25em;text-transform: uppercase;font-size:14px;">
+	    <span class="uk-icon" uk-icon="arrow-left"></span> Previous Posts
+    </a>
+  
+  {% endif %}
+
+  {% if paginator.previous_page %}
+    <a href="{{ site.url }}/blog{{ paginator.previous_page_path | relative_url }}" class="prev" style="float:right;line-height: 135%;letter-spacing: 0.25em;text-transform: uppercase;font-size:14px;">
+      Later Posts <span class="uk-icon" uk-icon="arrow-right"></span>
+    </a>
+  
+  {% endif %}
+</div>
+{% endif %}-->
+	    	                                                                      
+        </div>
+	
+	{% include footer.html %}
+
+	
+</div>
+    
+<script src="/art/mode-switcher.js"></script>
+    
+</body>
+</html>
